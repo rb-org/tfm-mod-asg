@@ -99,7 +99,6 @@ variable "svr_type" {
   default = "exol"
 }
 
-
 variable "offhours" {
   default = "on"
 }
