@@ -38,6 +38,7 @@ resource "aws_autoscaling_group" "main_asg" {
   default_cooldown          = "${var.default_cooldown}"
   desired_capacity          = "${var.desired_capacity}"
   force_delete              = true
+  wait_for_elb_capacity     = "${var.desired_capacity}"
 
   #placement_group           = "${aws_placement_group.test.id}"
   launch_configuration = "${aws_launch_configuration.main_lc.name}"
